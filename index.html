@@ -1,247 +1,113 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عروض تصميم مواقع ويب احترافية - الجزائر</title>
-    <style>
-        :root {
-            --primary: #2c3e50;
-            --secondary: #3498db;
-            --accent: #e74c3c;
-            --light: #ecf0f1;
-        }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        body {
-            background-color: #f8f9fa;
-            color: #333;
-            line-height: 1.6;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        header {
-            background: linear-gradient(135deg, var(--primary), #1a2530);
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-            border-radius: 0 0 20px 20px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-        .subtitle {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-        .offers {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-            margin: 40px 0;
-        }
-        .offer-card {
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-            padding: 30px;
-            width: 100%;
-            max-width: 350px;
-            transition: transform 0.3s, box-shadow 0.3s;
-            border-top: 5px solid var(--secondary);
-            position: relative;
-            overflow: hidden;
-        }
-        .offer-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-        }
-        .offer-card:nth-child(2) {
-            border-top-color: var(--accent);
-        }
-        .offer-card:nth-child(3) {
-            border-top-color: #27ae60;
-        }
-        .offer-badge {
-            position: absolute;
-            top: 15px;
-            left: -30px;
-            background: var(--secondary);
-            color: white;
-            padding: 5px 30px;
-            transform: rotate(-45deg);
-            font-weight: bold;
-            font-size: 14px;
-            width: 140px;
-            text-align: center;
-        }
-        .offer-card:nth-child(2) .offer-badge {
-            background: var(--accent);
-        }
-        .offer-card:nth-child(3) .offer-badge {
-            background: #27ae60;
-        }
-        .price {
-            font-size: 2.2rem;
-            color: var(--primary);
-            margin: 20px 0;
-            font-weight: 700;
-        }
-        .duration {
-            background: var(--light);
-            display: inline-block;
-            padding: 5px 15px;
-            border-radius: 20px;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-        .features {
-            list-style-type: none;
-            margin: 20px 0;
-        }
-        .features li {
-            padding: 10px 0;
-            border-bottom: 1px dashed #eee;
-            position: relative;
-            padding-right: 25px;
-        }
-        .features li:before {
-            content: "✓";
-            color: #27ae60;
-            font-weight: bold;
-            position: absolute;
-            right: 0;
-        }
-        .contact {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            text-align: center;
-            margin: 30px auto;
-            max-width: 800px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-            border-top: 5px solid var(--primary);
-        }
-        .contact-methods {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 25px;
-        }
-        .contact-item {
-            display: flex;
-            align-items: center;
-            background: var(--light);
-            padding: 12px 25px;
-            border-radius: 50px;
-            transition: all 0.3s;
-        }
-        .contact-item:hover {
-            background: var(--secondary);
-            color: white;
-            transform: translateY(-3px);
-        }
-        .icon {
-            margin-left: 10px;
-            font-size: 1.2rem;
-        }
-        @media (max-width: 768px) {
-            .offers {
-                flex-direction: column;
-                align-items: center;
-            }
-            .contact-methods {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Offres Développement Web</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script>
+    function switchLang(lang) {
+      window.location.href = lang === 'ar' ? '/ar.html' : '/fr.html';
+    }
+  </script>
 </head>
-<body>
-    <header>
-        <div class="container">
-            <h1>تصميم مواقع ويب احترافية</h1>
-            <p class="subtitle">زود مصداقيتك وجذب عملاء جدد بموقع احترافي</p>
-        </div>
-    </header>
-
-    <div class="container">
-        <div class="offers">
-            <!-- العرض 1 -->
-            <div class="offer-card">
-                <div class="offer-badge">الأكثر طلباً</div>
-                <h2>صفحة هبوط (Landing Page)</h2>
-                <div class="price">35,000 د.ج</div>
-                <div class="duration">التسليم: 3-4 أيام</div>
-                <ul class="features">
-                    <li>تصميم متجاوب لجميع الأجهزة</li>
-                    <li>نموذج تواصل (واتساب + إيميل)</li>
-                    <li>تحسين محركات البحث (SEO)</li>
-                    <li>سرعة تحميل عالية</li>
-                    <li>تصميم حديث وجذاب</li>
-                </ul>
-            </div>
-
-            <!-- العرض 2 -->
-            <div class="offer-card">
-                <div class="offer-badge">الأفضل قيمة</div>
-                <h2>موقع شركة (5 صفحات)</h2>
-                <div class="price">70,000 د.ج</div>
-                <div class="duration">التسليم: 7-10 أيام</div>
-                <ul class="features">
-                    <li>حتى 5 صفحات رئيسية (من نحن - خدمات - تواصل)</li>
-                    <li>نظام إدارة محتوى (WordPress)</li>
-                    <li>خريطة جوجل + ربط واتساب</li>
-                    <li>تحسين SEO متقدم</li>
-                    <li>تصميم احترافي مع لوحة تحكم</li>
-                    <li>دعم فني لمدة شهر</li>
-                </ul>
-            </div>
-
-            <!-- العرض 3 -->
-            <div class="offer-card">
-                <div class="offer-badge">المتجر الإلكتروني</div>
-                <h2>موقع ديناميكي متكامل</h2>
-                <div class="price">120,000 د.ج</div>
-                <div class="duration">التسليم: 20-30 يوماً</div>
-                <ul class="features">
-                    <li>تطبيق ويب متكامل</li>
-                    <li>دعم متعدد اللغات (عربي/فرنسي)</li>
-                    <li>ربط بأنظمة الدفع الإلكتروني</li>
-                    <li>نظام إدارة محتوى متقدم</li>
-                    <li>اسم نطاق + استضافة سنة</li>
-                    <li>دعم فني مجاني لمدة 3 أشهر</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="contact">
-            <h2>للحجز أو الاستفسار</h2>
-            <div class="contact-methods">
-                <a href="https://wa.me/213554563328" class="contact-item">
-                    <span class="icon">📱</span>
-                    <span>واتساب: 554563328 (213+)</span>
-                </a>
-                <a href="mailto:aymenchairi418@gmail.com" class="contact-item">
-                    <span class="icon">✉️</span>
-                    <span>aymenchairi418@gmail.com</span>
-                </a>
-            </div>
-            <p style="margin-top: 25px; font-style: italic; color: #777;">
-                جميع العروض تشمل تصميم حديث، تحسين SEO، وسرعة عالية مع دعم فني
-            </p>
-        </div>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-white shadow p-6 text-center relative">
+    <div class="absolute top-4 right-4">
+      <button onclick="switchLang('fr')" class="bg-indigo-200 hover:bg-indigo-300 text-indigo-900 font-semibold px-3 py-1 rounded-l">FR</button>
+      <button onclick="switchLang('ar')" class="bg-indigo-200 hover:bg-indigo-300 text-indigo-900 font-semibold px-3 py-1 rounded-r">AR</button>
     </div>
+    <h1 class="text-3xl font-bold">Nos Offres de Développement Web</h1>
+    <p class="text-gray-600">Des solutions professionnelles basées sur la confiance et la qualité</p>
+  </header>
+
+  <main class="p-8 grid gap-8 lg:grid-cols-2 xl:grid-cols-3">
+    <!-- Plan Essentiel -->
+    <section class="bg-white rounded-2xl shadow p-6">
+      <h2 class="text-xl font-semibold text-indigo-600 mb-2">Vitrine Digitale</h2>
+      <p class="text-gray-500">35 000 DZD · Petites entreprises & artisans</p>
+      <ul class="mt-4 space-y-2 list-disc list-inside">
+        <li>Site statique 5 pages max</li>
+        <li>Design responsive et moderne</li>
+        <li>Hébergement + domaine 1 an</li>
+        <li>SEO de base</li>
+      </ul>
+      <p class="mt-4 italic text-sm">Exemple : Artisan présentant ses créations</p>
+    </section>
+
+    <!-- Plan Croissance -->
+    <section class="bg-white rounded-2xl shadow p-6">
+      <h2 class="text-xl font-semibold text-blue-600 mb-2">Booster Votre Business</h2>
+      <p class="text-gray-500">70 000 DZD · Entreprises en expansion</p>
+      <ul class="mt-4 space-y-2 list-disc list-inside">
+        <li>Site dynamique avec CMS</li>
+        <li>Pages illimitées, blog intégré</li>
+        <li>Formulaire contact avancé</li>
+        <li>Réseaux sociaux + support prioritaire</li>
+      </ul>
+      <p class="mt-4 italic text-sm">Exemple : Restaurant avec menu & réservations</p>
+    </section>
+
+    <!-- Plan Performance -->
+    <section class="bg-white rounded-2xl shadow p-6">
+      <h2 class="text-xl font-semibold text-green-600 mb-2">E-Commerce Complet</h2>
+      <p class="text-gray-500">120 000 DZD · Vente en ligne</p>
+      <ul class="mt-4 space-y-2 list-disc list-inside">
+        <li>Boutique en ligne complète</li>
+        <li>Gestion stocks, commandes</li>
+        <li>SEO avancé et certificat SSL</li>
+        <li>Support client dédié</li>
+      </ul>
+      <p class="mt-4 italic text-sm">Exemple : Boutique de vêtements</p>
+    </section>
+
+    <!-- Plan Sur Mesure -->
+    <section class="bg-white rounded-2xl shadow p-6">
+      <h2 class="text-xl font-semibold text-purple-600 mb-2">Votre Projet Unique</h2>
+      <p class="text-gray-500">Prix sur devis · Besoins spécifiques</p>
+      <ul class="mt-4 space-y-2 list-disc list-inside">
+        <li>Applications web personnalisées</li>
+        <li>Intégrations systèmes existants</li>
+        <li>E-learning, plateformes collaboratives</li>
+        <li>Accompagnement total</li>
+      </ul>
+      <p class="mt-4 italic text-sm">Exemple : Plateforme de cours interactifs</p>
+    </section>
+  </main>
+
+  <section class="bg-indigo-100 p-8 text-center mt-8">
+    <h3 class="text-2xl font-bold mb-4">Pourquoi Nous Choisir ?</h3>
+    <p class="mb-6 text-gray-700">Nous bâtissons une relation de confiance avec nos clients à travers un service professionnel et personnalisé.</p>
+    <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+      <div>
+        <h4 class="font-semibold">Expertise Locale</h4>
+        <p class="text-sm">Connaissance du marché algérien</p>
+      </div>
+      <div>
+        <h4 class="font-semibold">Équipe Qualifiée</h4>
+        <p class="text-sm">Développeurs expérimentés</p>
+      </div>
+      <div>
+        <h4 class="font-semibold">Tarifs Compétitifs</h4>
+        <p class="text-sm">Offres claires et abordables</p>
+      </div>
+      <div>
+        <h4 class="font-semibold">Support Personnalisé</h4>
+        <p class="text-sm">Réactif et à votre écoute</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-green-50 p-6 text-center">
+    <h3 class="text-xl font-bold text-green-700 mb-2">Offre Spéciale de Lancement</h3>
+    <p class="mb-2">🎉 Réduction de <strong>15%</strong> sur tous les plans pendant <strong>1 mois</strong> !</p>
+    <p class="mb-2">🔍 Audit SEO Gratuit</p>
+    <p class="mb-2">💬 Consultation gratuite avec nos experts</p>
+  </section>
+
+  <footer class="bg-gray-800 text-white p-6 text-center">
+    <h4 class="font-semibold">Contactez-Nous</h4>
+    <p class="text-sm">Téléphone | Email | Réseaux Sociaux</p>
+  </footer>
 </body>
 </html>
